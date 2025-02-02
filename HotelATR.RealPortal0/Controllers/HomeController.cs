@@ -28,5 +28,28 @@ namespace HotelATR.RealPortal0.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        public IActionResult Contact()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        //public IActionResult AddMessage(string name, string email, string message)
+        public IActionResult AddMessage(Message userMessage)
+        {
+            var data = Request.Form;
+            return RedirectToAction("Contact", "home");
+            //return View();
+        }
+
+        [HttpPost]
+        public IActionResult SendEmail(string email)
+        {
+            //return RedirectToAction("Contact", "home");
+            return View();
+        }
+
     }
 }
