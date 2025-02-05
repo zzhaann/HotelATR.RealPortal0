@@ -3,8 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Home Page || Hotel ATR</title>
-    <meta name="description" content="">
+    <title>@ViewData["Title"] || Hotel ATR</title>
+    <meta name="description" content="@ViewData["Description"]">
+    <meta name="keywords" content="@ViewData["Keywords"]">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Favicon Icon -->
@@ -67,12 +68,12 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="breadcrumb-text text-center">
-                        <h2>Our Staff</h2>
-                        <p>A quality room of hotel ATR with sea or mountain view</p>
+                        <h2>@ViewData["PageName"]</h2>
+                        <p>@ViewData["PageDescription"]</p>
                         <div class="breadcrumb-bar">
                             <ul class="breadcrumb">
                                 <li><a href="index.html">Home</a></li>
-                                <li>Our Staff</li>
+                                <li>@ViewData["PageName"]</li>
                             </ul>
                         </div>
                     </div>
